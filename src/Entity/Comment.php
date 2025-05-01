@@ -20,6 +20,12 @@ class Comment
     #[ORM\Column(type: Types::TEXT)]
     private ?string $content = null;
 
+    #[ORM\ManyToOne(inversedBy: 'comments')]
+    private ?User $author = null;
+
+    #[ORM\ManyToOne(inversedBy: 'comments')]
+    private ?Article $article = null;
+
     public function getId(): ?Uuid
     {
         return $this->id;
@@ -33,6 +39,30 @@ class Comment
     public function setContent(string $content): static
     {
         $this->content = $content;
+
+        return $this;
+    }
+
+    public function getAuthor(): ?User
+    {
+        return $this->author;
+    }
+
+    public function setAuthor(?User $author): static
+    {
+        $this->author = $author;
+
+        return $this;
+    }
+
+    public function getArticle(): ?Article
+    {
+        return $this->article;
+    }
+
+    public function setArticle(?Article $article): static
+    {
+        $this->article = $article;
 
         return $this;
     }
