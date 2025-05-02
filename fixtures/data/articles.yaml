@@ -130,6 +130,7 @@ articles:
 
   - title: "Les tendances musicales de 2023 : Ce qui nous attend cette année"
     author: "admin@example.com"
+    cover: "f4cf0e02-aa1f-4ed8-a67c-4a2a585dc3e5"
     content: |
       L'année 2023 s'est révélée être une période fascinante pour la musique, marquée par une accélération des cycles de tendances, une hybridation des genres toujours plus poussée et l'influence croissante de nouvelles technologies et plateformes. Alors que l'année avance, plusieurs courants majeurs se dessinent et confirment leur impact sur le paysage sonore mondial.
 
@@ -180,6 +181,7 @@ articles:
 
   - title: "Les festivals de musique à ne pas manquer cet été"
     author: "admin@example.com"
+    cover: "61820daa-0966-4692-9c20-b0f2c4b06a78"
     content: |
       L'été est synonyme de soleil, de vacances, et bien sûr, de **festivals de musique** ! Après quelques années perturbées, la saison des festivals bat à nouveau son plein, offrant une diversité incroyable d'expériences musicales et humaines. Que vous soyez fan de rock rugueux, d'électro hypnotique, de pop entraînante ou de découvertes indie, il y a forcément un festival fait pour vous. Voici une sélection (non exhaustive !) des types de rendez-vous à cocher sur votre calendrier estival.
 
