@@ -7,27 +7,28 @@ use App\Entity\User;
 use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Persistence\ObjectManager;
 use Symfony\Component\PasswordHasher\Hasher\UserPasswordHasherInterface;
+use Symfony\Component\Yaml\Yaml;
 
 
 class Users extends Fixture
 {
-    public function __construct(private readonly UserPasswordHasherInterface $passwordHasher)
+    public function __construct(private readonly UserPasswordHasherInterface $passwordHasher,
+                                private readonly string                      $projectDir)
     {
     }
 
     public function load(ObjectManager $manager): void
     {
-        $admin = new User();
-        $admin->setEmail("admin@example.com");
-        $admin->setRoles(["ROLE_ADMIN"]);
-        $admin->setPassword($this->passwordHasher->hashPassword($admin, "admin"));
-        $manager->persist($admin);
+        $dataYamlLink = $this->projectDir . '/fixtures/data/users.yaml';
+        $data = Yaml::parseFile($dataYamlLink)["users"];
 
-        $user = new User();
-        $user->setEmail("user@example.com");
-        $user->setRoles(["ROLE_USER"]);
-        $user->setPassword($this->passwordHasher->hashPassword($user, "user"));
-        $manager->persist($user);
+        foreach ($data as $userData) {
+            $user = new User();
+            $user->setEmail($userData["email"]);
+            $user->setRoles($userData["roles"]);
+            $user->setPassword($this->passwordHasher->hashPassword($user, $userData["password"]));
+            $manager->persist($user);
+        }
 
         $manager->flush();
     }
