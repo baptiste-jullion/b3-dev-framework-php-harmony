@@ -3,8 +3,19 @@ users:
     roles:
       - "ROLE_ADMIN"
     password: "admin"
+    first_name: "Gustavo"
+    last_name: "Fring"
 
   - email: "user@example.com"
     roles:
       - "ROLE_USER"
     password: "user"
+    first_name: "Walter"
+    last_name: "White"
+
+  - email: "user2@example.com"
+    roles:
+      - "ROLE_USER"
+    password: "user2"
+    first_name: "Jesse"
+    last_name: "Pinkman"
