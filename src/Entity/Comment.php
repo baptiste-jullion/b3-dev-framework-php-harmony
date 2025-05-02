@@ -26,6 +26,9 @@ class Comment
     #[ORM\ManyToOne(inversedBy: 'comments')]
     private ?Article $article = null;
 
+    #[ORM\Column]
+    private ?\DateTimeImmutable $sentAt = null;
+
     public function getId(): ?Uuid
     {
         return $this->id;
@@ -63,6 +66,18 @@ class Comment
     public function setArticle(?Article $article): static
     {
         $this->article = $article;
+
+        return $this;
+    }
+
+    public function getSentAt(): ?\DateTimeImmutable
+    {
+        return $this->sentAt;
+    }
+
+    public function setSentAt(\DateTimeImmutable $sentAt): static
+    {
+        $this->sentAt = $sentAt;
 
         return $this;
     }
