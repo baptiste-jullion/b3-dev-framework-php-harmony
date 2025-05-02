@@ -2,6 +2,7 @@
 
 namespace App\Entity;
 
+
 use App\Repository\ArticleRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
@@ -9,6 +10,7 @@ use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Bridge\Doctrine\Types\UuidType;
 use Symfony\Component\Uid\Uuid;
+
 
 #[ORM\Entity(repositoryClass: ArticleRepository::class)]
 class Article
@@ -18,34 +20,25 @@ class Article
     #[ORM\GeneratedValue(strategy: 'CUSTOM')]
     #[ORM\CustomIdGenerator(class: 'doctrine.uuid_generator')]
     private ?Uuid $id = null;
-
     #[ORM\Column(length: 255)]
     private ?string $title = null;
-
     #[ORM\Column(length: 255)]
     private ?string $slug = null;
-
     #[ORM\Column(type: Types::TEXT)]
     private ?string $content = null;
-
     #[ORM\Column(nullable: true)]
     private ?\DateTimeImmutable $createdAt = null;
-
     #[ORM\Column(nullable: true)]
     private ?\DateTimeImmutable $updatedAt = null;
-
     #[ORM\Column(nullable: true)]
     private ?\DateTimeImmutable $publishedAt = null;
-
-    #[ORM\Column(length: 255, nullable: true)]
-    private ?string $cover = null;
-
+    #[ORM\Column(type: UuidType::NAME, unique: true, nullable: true)]
+    private ?Uuid $cover = null;
     /**
      * @var Collection<int, Comment>
      */
     #[ORM\OneToMany(targetEntity: Comment::class, mappedBy: 'article')]
     private Collection $comments;
-
     #[ORM\ManyToOne(inversedBy: 'articles')]
     private ?User $author = null;
 
@@ -131,12 +124,12 @@ class Article
         return $this;
     }
 
-    public function getCover(): ?string
+    public function getCover(): ?Uuid
     {
         return $this->cover;
     }
 
-    public function setCover(?string $cover): static
+    public function setCover(?Uuid $cover): static
     {
         $this->cover = $cover;
 
