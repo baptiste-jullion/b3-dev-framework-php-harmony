@@ -27,6 +27,8 @@ class Users extends Fixture
             $user->setEmail($userData["email"]);
             $user->setRoles($userData["roles"]);
             $user->setPassword($this->passwordHasher->hashPassword($user, $userData["password"]));
+            $user->setFirstName($userData["first_name"]);
+            $user->setLastName($userData["last_name"]);
             $manager->persist($user);
         }
 
