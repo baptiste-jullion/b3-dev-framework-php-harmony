@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ article.title }}!{% endblock %}
+
+{% block body %}
+    <article class="flex gap-8 mx-auto container w-fit">
+        <div class="w-2xs"></div>
+        <div>
+            <div class="prose">
+                <h1>{{ article.title }}</h1>
+                {% apply markdown_to_html %}
+                    {{ article.content }}
+                {% endapply %}
+            </div>
+            <div>
+                {% for comment in article.comments %}
+                    <p>{{ comment.content }}</p>
+                {% endfor %}
+            </div>
+        </div>
+        <aside class="sticky top-8 w-2xs h-fit">
+            <p>{{ article.author.firstName }} {{ article.author.lastName }}</p>
+        </aside>
+    </article>
+{% endblock %}
