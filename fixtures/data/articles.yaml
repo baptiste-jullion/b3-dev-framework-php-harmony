@@ -2,6 +2,7 @@ articles:
   - title: "L'évolution du Hip-Hop : Des rues du Bronx aux sommets des charts mondiaux"
     author: "admin@example.com"
     cover: "b27b7aa0-186a-4c94-b825-41049bbc0e46"
+    published_at: "2017-05-28 23:38:45"
     content: |
       <p>Né dans les quartiers défavorisés du Bronx à New York au début des années 1970, le Hip-Hop est bien plus qu'un genre musical. C'est une culture, un mouvement, une voix pour les sans-voix, qui a transcendé ses origines modestes pour devenir une force dominante sur la scène musicale mondiale. Son évolution est une histoire fascinante de résilience, d'innovation et d'impact culturel profond.</p>
       <h2>Les Fondations (Années 1970)</h2>
@@ -42,6 +43,7 @@ articles:
   - title: "Top 10 des albums de Rock Alternatif des années 90 à redécouvrir absolument"
     author: "admin@example.com"
     cover: "dda9f2f6-6b9b-410c-bb95-acd2a8650d9c"
+    published_at: "2023-08-01 10:32:39"
     content: |
       <p>Les années 90 ont été une décennie explosive pour le rock alternatif. Sortant de l'ombre de l'underground, ce courant musical diversifié a envahi les ondes, les charts et les lecteurs CD, définissant le son et l'attitude d'une génération. Caractérisé par une éthique <em>DIY</em>, une volonté d'expérimentation et souvent une dose saine d'angoisse ou d'ironie, le rock alternatif des années 90 reste une source d'inspiration inépuisable. Voici 10 albums emblématiques de cette époque, à (re)découvrir d'urgence.</p>
       <h2>L'explosion Grunge et au-delà</h2>
@@ -72,6 +74,7 @@ articles:
   - title: "Critique d'album : Le dernier opus surprenant de Lunar Echoes"
     author: "admin@example.com"
     cover: "ee10d5cc-fbae-4a85-b9a4-0b12e2b733bf"
+    published_at: "2019-07-11 00:40:27"
     content: |
       <p><strong>Artiste :</strong> Lunar Echoes
       <strong>Album :</strong> <em>Ephemeral Glyphs</em>
@@ -100,6 +103,7 @@ articles:
   - title: "Les tendances musicales de 2023 : Ce qui nous attend cette année"
     author: "admin@example.com"
     cover: "f4cf0e02-aa1f-4ed8-a67c-4a2a585dc3e5"
+    published_at: "2019-01-19 17:30:07"
     content: |
       <p>L'année 2023 s'est révélée être une période fascinante pour la musique, marquée par une accélération des cycles de tendances, une hybridation des genres toujours plus poussée et l'influence croissante de nouvelles technologies et plateformes. Alors que l'année avance, plusieurs courants majeurs se dessinent et confirment leur impact sur le paysage sonore mondial.</p>
       <h2>1. L'Hyper-Accélération des Cycles et l'Influence de TikTok</h2>
@@ -147,6 +151,7 @@ articles:
   - title: "Les festivals de musique à ne pas manquer cet été"
     author: "admin@example.com"
     cover: "61820daa-0966-4692-9c20-b0f2c4b06a78"
+    published_at: "2022-06-16 19:51:15"
     content: |
       <p>L'été est synonyme de soleil, de vacances, et bien sûr, de <strong>festivals de musique</strong> ! Après quelques années perturbées, la saison des festivals bat à nouveau son plein, offrant une diversité incroyable d'expériences musicales et humaines. Que vous soyez fan de rock rugueux, d'électro hypnotique, de pop entraînante ou de découvertes indie, il y a forcément un festival fait pour vous. Voici une sélection (non exhaustive !) des types de rendez-vous à cocher sur votre calendrier estival.</p>
       <h2>Les Géants Incontournables</h2>
@@ -192,6 +197,7 @@ articles:
   - title: "Les artistes à suivre en 2023 : Nouveaux talents et révélations"
     author: "admin@example.com"
     cover: "dc4769e8-f731-4971-9880-1694ae83a27c"
+    published_at: "2018-11-09 06:47:27"
     content: |
       <p>Chaque année apporte son lot de découvertes musicales, ces artistes émergents qui bousculent les codes, captent l'air du temps et séduisent nos oreilles. 2023 ne fait pas exception, regorgeant de talents prometteurs dans tous les genres. Repérer les futures stars ou simplement trouver sa nouvelle obsession musicale est l'un des grands plaisirs de l'écoute. Voici quelques profils d'artistes (mélange de réels et d'archétypes pour l'exemple) qui ont marqué l'année ou dont on attend beaucoup.</p>
       <h2>L'Électro-Pop Sensible : <strong>Silas Grove</strong></h2>
@@ -241,6 +247,7 @@ articles:
   - title: "L'impact de la musique sur la santé mentale : Une exploration"
     author: "admin@example.com"
     cover: "a668a2f0-3a82-4bd3-8857-6463c83312cd"
+    published_at: "2019-12-17 12:16:08"
     content: |
       <p>La musique est une compagne quasi universelle de l'expérience humaine. Elle rythme nos joies, console nos peines, accompagne nos trajets et nos moments de solitude. Au-delà du simple divertissement, la musique exerce une influence profonde et complexe sur notre état psychologique et émotionnel. Explorer cet impact sur la santé mentale révèle un outil puissant, capable du meilleur comme, parfois, nécessitant une utilisation consciente.</p>
       <h2>Les Bienfaits Thérapeutiques de la Musique</h2>
@@ -268,6 +275,7 @@ articles:
   - title: "Les collaborations inattendues qui ont marqué l'année 2022"
     author: "admin@example.com"
     cover: "acfa78c4-e08a-4b09-9cec-66aeb1be72f3"
+    published_at: "2022-12-31 15:00:00"
     content: |
       <p>Dans le paysage musical actuel, où les frontières entre les genres sont de plus en plus poreuses, les collaborations sont devenues monnaie courante. Mais certaines sortent du lot, non pas par leur évidence, mais par leur caractère <strong>inattendu</strong>. Ces rencontres improbables entre artistes d'univers différents, de générations distinctes ou de styles musicaux éloignés, ont souvent le pouvoir de surprendre, de bousculer les attentes et de créer des moments musicaux mémorables. L'année 2022 a été particulièrement riche en associations surprenantes qui ont marqué les esprits.</p>
       <h2>Quand les Mondes se Rencontrent</h2>
@@ -295,6 +303,7 @@ articles:
   - title: "La musique et la technologie : Comment l'IA transforme l'industrie musicale"
     author: "admin@example.com"
     cover: "1bc559d7-a2ab-440f-9838-13227e0e4b24"
+    published_at: "2024-11-09 13:16:00"
     content: |
       <p>La technologie a toujours été un moteur de transformation pour l'industrie musicale. De l'invention du phonographe à l'avènement du streaming, chaque innovation a redéfini la manière dont la musique est créée, distribuée et consommée. Aujourd'hui, une nouvelle révolution est en marche, portée par l'<strong>Intelligence Artificielle (IA)</strong>. L'IA n'est plus de la science-fiction ; elle s'immisce progressivement dans toutes les strates de l'écosystème musical, soulevant autant d'enthousiasme que d'interrogations.</p>
       <h2>L'IA au Service de la Création Musicale</h2>
