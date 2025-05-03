@@ -1,6 +1,7 @@
 @import "tailwindcss";
 
 @plugin "@tailwindcss/typography";
+@plugin '@tailwindcss/forms';
 
 body {
     font-family: "Bricolage Grotesque", sans-serif;
