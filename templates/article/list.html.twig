@@ -1,11 +1,11 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Liste des articles!{% endblock %}
+{% block title %}Blog{% endblock %}
 
 {% block body %}
-    <div class="mx-auto container">
-        <h1>Liste des articles</h1>
-        <div class="grid grid-cols-3 gap-8">
+    <div class="mx-auto container p-4">
+        <h1 class="text-center my-16 text-5xl font-black">Tous nos articles sur le monde de la musique</h1>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {% for article in articles %}
                 <a
                         href="{{ path('app_article_by_slug', { 'slug': article.slug }) }}">
@@ -14,7 +14,7 @@
                         <h2 class="mt-6 text-2xl font-bold mb-4">
                             {{ article.title }}
                         </h2>
-                        <p>{{ article.content|markdown_to_html|striptags|u.truncate(128, '...', false) }}</p>
+                        <p>{{ article.content|striptags|u.truncate(128, '...', false) }}</p>
                     </article>
                 </a>
             {% endfor %}
