@@ -2,11 +2,14 @@
 
 namespace App\Entity;
 
+
 use App\Repository\CommentRepository;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Bridge\Doctrine\Types\UuidType;
 use Symfony\Component\Uid\Uuid;
+use Symfony\Component\Validator\Constraints as Assert;
+
 
 #[ORM\Entity(repositoryClass: CommentRepository::class)]
 class Comment
@@ -16,16 +19,19 @@ class Comment
     #[ORM\GeneratedValue(strategy: 'CUSTOM')]
     #[ORM\CustomIdGenerator(class: 'doctrine.uuid_generator')]
     private ?Uuid $id = null;
-
     #[ORM\Column(type: Types::TEXT)]
+    #[Assert\NotBlank(message: "Le commentaire ne peut pas être vide.")]
+    #[Assert\Length(
+        min: 3,
+        max: 1000,
+        minMessage: "Le commentaire doit contenir au moins {{ limit }} caractères.",
+        maxMessage: "Le commentaire ne peut pas dépasser {{ limit }} caractères.",
+    )]
     private ?string $content = null;
-
     #[ORM\ManyToOne(inversedBy: 'comments')]
     private ?User $author = null;
-
     #[ORM\ManyToOne(inversedBy: 'comments')]
     private ?Article $article = null;
-
     #[ORM\Column]
     private ?\DateTimeImmutable $sentAt = null;
 
