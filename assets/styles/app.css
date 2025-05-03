@@ -6,3 +6,8 @@
 body {
     font-family: "Bricolage Grotesque", sans-serif;
 }
+
+.ql-editor {
+    @apply prose max-w-none;
+    font-family: "Bricolage Grotesque", sans-serif;
+}
