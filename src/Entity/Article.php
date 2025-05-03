@@ -26,7 +26,7 @@ class Article
     private ?string $slug = null;
     #[ORM\Column(type: Types::TEXT)]
     private ?string $content = null;
-    #[ORM\Column(nullable: true)]
+    #[ORM\Column(type: Types::DATETIME_IMMUTABLE, options: ['default' => 'CURRENT_TIMESTAMP'])]
     private ?\DateTimeImmutable $createdAt = null;
     #[ORM\Column(nullable: true)]
     private ?\DateTimeImmutable $updatedAt = null;
@@ -37,7 +37,7 @@ class Article
     /**
      * @var Collection<int, Comment>
      */
-    #[ORM\OneToMany(targetEntity: Comment::class, mappedBy: 'article')]
+    #[ORM\OneToMany(targetEntity: Comment::class, mappedBy: 'article', cascade: ['persist', 'remove'])]
     private Collection $comments;
     #[ORM\ManyToOne(inversedBy: 'articles')]
     private ?User $author = null;
