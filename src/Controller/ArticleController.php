@@ -4,7 +4,9 @@ namespace App\Controller;
 
 
 use App\Entity\Article;
+use App\Entity\Comment;
 use App\Form\ArticleForm;
+use App\Form\CommentForm;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
@@ -26,7 +28,7 @@ final class ArticleController extends AbstractController
     }
 
     #[Route('/blog/{slug}', name: 'app_article_by_slug')]
-    public function show(EntityManagerInterface $entityManager, string $slug): Response
+    public function show(EntityManagerInterface $entityManager, string $slug, Request $request): Response
     {
         $article = $entityManager->getRepository(Article::class)->findOneBy(["slug" => strtolower($slug)]);
 
@@ -34,8 +36,26 @@ final class ArticleController extends AbstractController
             throw $this->createNotFoundException('Article not found');
         }
 
+        $comment = new Comment();
+        $form = $this->createForm(CommentForm::class, $comment);
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $comment->setArticle($article);
+            $comment->setAuthor($this->getUser());
+            $comment->setSentAt(new \DateTimeImmutable());
+
+            $entityManager->persist($comment);
+            $entityManager->flush();
+
+            $this->addFlash('success', 'Votre commentaire a été ajouté.');
+
+            return $this->redirectToRoute('app_article_by_slug', ['slug' => $slug]);
+        }
+
         return $this->render('article/slug.html.twig', [
             'article' => $article,
+            'commentForm' => $form->createView(),
         ]);
     }
 
