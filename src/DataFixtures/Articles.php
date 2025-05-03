@@ -35,7 +35,6 @@ class Articles extends Fixture implements DependentFixtureInterface
             $article->setAuthor($manager->getRepository(User::class)->findOneBy(["email" => $articleData["author"]]));
             $manager->persist($article);
         }
-
         $manager->flush();
     }
 
