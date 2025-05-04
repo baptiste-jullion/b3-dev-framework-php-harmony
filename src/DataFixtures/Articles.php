@@ -34,6 +34,7 @@ class Articles extends Fixture implements DependentFixtureInterface
             $article->setCover(($articleData["cover"] ?? null) ? Uuid::fromString($articleData["cover"]) : null);
             $article->setAuthor($manager->getRepository(User::class)->findOneBy(["email" => $articleData["author"]]));
             $article->setPublishedAt(new \DateTimeImmutable($articleData["published_at"]));
+            $article->setArtists($articleData["artists"] ?? null);
             $manager->persist($article);
         }
         $manager->flush();

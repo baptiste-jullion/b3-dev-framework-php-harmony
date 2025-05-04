@@ -3,6 +3,10 @@ articles:
     author: "admin@example.com"
     cover: "b27b7aa0-186a-4c94-b825-41049bbc0e46"
     published_at: "2017-05-28 23:38:45"
+    artists:
+      - "Snoop Dogg"
+      - "Jay-Z"
+      - "Eminem"
     content: |
       <p>Né dans les quartiers défavorisés du Bronx à New York au début des années 1970, le Hip-Hop est bien plus qu'un genre musical. C'est une culture, un mouvement, une voix pour les sans-voix, qui a transcendé ses origines modestes pour devenir une force dominante sur la scène musicale mondiale. Son évolution est une histoire fascinante de résilience, d'innovation et d'impact culturel profond.</p>
       <h2>Les Fondations (Années 1970)</h2>
@@ -44,6 +48,10 @@ articles:
     author: "admin@example.com"
     cover: "dda9f2f6-6b9b-410c-bb95-acd2a8650d9c"
     published_at: "2023-08-01 10:32:39"
+    artists:
+      - "Nirvana"
+      - "Pearl Jam"
+      - "R.E.M."
     content: |
       <p>Les années 90 ont été une décennie explosive pour le rock alternatif. Sortant de l'ombre de l'underground, ce courant musical diversifié a envahi les ondes, les charts et les lecteurs CD, définissant le son et l'attitude d'une génération. Caractérisé par une éthique <em>DIY</em>, une volonté d'expérimentation et souvent une dose saine d'angoisse ou d'ironie, le rock alternatif des années 90 reste une source d'inspiration inépuisable. Voici 10 albums emblématiques de cette époque, à (re)découvrir d'urgence.</p>
       <h2>L'explosion Grunge et au-delà</h2>
@@ -104,6 +112,10 @@ articles:
     author: "admin@example.com"
     cover: "f4cf0e02-aa1f-4ed8-a67c-4a2a585dc3e5"
     published_at: "2019-01-19 17:30:07"
+    artists:
+      - "Billie Eilish"
+      - "Bad Bunny"
+      - "Dua Lipa"
     content: |
       <p>L'année 2023 s'est révélée être une période fascinante pour la musique, marquée par une accélération des cycles de tendances, une hybridation des genres toujours plus poussée et l'influence croissante de nouvelles technologies et plateformes. Alors que l'année avance, plusieurs courants majeurs se dessinent et confirment leur impact sur le paysage sonore mondial.</p>
       <h2>1. L'Hyper-Accélération des Cycles et l'Influence de TikTok</h2>
@@ -198,6 +210,12 @@ articles:
     author: "admin@example.com"
     cover: "dc4769e8-f731-4971-9880-1694ae83a27c"
     published_at: "2018-11-09 06:47:27"
+    artists:
+      - "Silas Grove"
+      - "Nova Kane"
+      - "Rusty Chains"
+      - "Echo Bloom"
+      - "Amara Collective"
     content: |
       <p>Chaque année apporte son lot de découvertes musicales, ces artistes émergents qui bousculent les codes, captent l'air du temps et séduisent nos oreilles. 2023 ne fait pas exception, regorgeant de talents prometteurs dans tous les genres. Repérer les futures stars ou simplement trouver sa nouvelle obsession musicale est l'un des grands plaisirs de l'écoute. Voici quelques profils d'artistes (mélange de réels et d'archétypes pour l'exemple) qui ont marqué l'année ou dont on attend beaucoup.</p>
       <h2>L'Électro-Pop Sensible : <strong>Silas Grove</strong></h2>
