@@ -4,7 +4,17 @@
 
 {% block body %}
     <article class="flex gap-8 mx-auto container w-fit">
-        <div class="w-2xs"></div>
+        <aside class="w-2xs flex flex-col gap-2 h-fit sticky top-8">
+            {% if artists is not empty %}
+                <h2 class="text-2xl font-semibold">Artistes liés</h2>
+                {% for artist in artists %}
+                    <a href="{{ artist.url }}" target="_blank" class="flex gap-2 items-center">
+                        <img src="{{ artist.image }}" alt="" class="aspect-square size-10 rounded-lg object-cover" />
+                        <p>{{ artist.name }}</p>
+                    </a>
+                {% endfor %}
+            {% endif %}
+        </aside>
         <div>
             <div class="prose max-w-3xl">
                 <img src="/covers/{{ article.cover }}.png" alt="" class="aspect-3/2 object-cover rounded-2xl">
@@ -49,7 +59,7 @@
         </div>
         <aside class="sticky top-8 w-2xs h-fit flex flex-col gap-4">
             <div>
-                <p>Écrit par</p>
+                <p>Écrit par</p>
                 <p class="text-xl font-semibold">{{ article.author.firstName }} {{ article.author.lastName }}</p>
             </div>
             <div>

@@ -7,6 +7,7 @@ use App\Entity\Article;
 use App\Entity\Comment;
 use App\Form\ArticleForm;
 use App\Form\CommentForm;
+use App\Service\SpotifyService;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
@@ -28,7 +29,7 @@ final class ArticleController extends AbstractController
     }
 
     #[Route('/blog/{slug}', name: 'app_article_by_slug')]
-    public function show(EntityManagerInterface $entityManager, string $slug, Request $request): Response
+    public function show(EntityManagerInterface $entityManager, string $slug, Request $request, SpotifyService $spotifyService): Response
     {
         $article = $entityManager->getRepository(Article::class)->findOneBy(["slug" => strtolower($slug)]);
 
@@ -53,9 +54,25 @@ final class ArticleController extends AbstractController
             return $this->redirectToRoute('app_article_by_slug', ['slug' => $slug]);
         }
 
+        $artists = $article->getArtists();
+        $formattedArtists = [];
+        if ($artists) {
+            foreach ($artists as $artist) {
+                $artistData = $spotifyService->getArtist($artist);
+                if ($artistData) {
+                    $formattedArtists[] = [
+                        'name' => $artistData['name'],
+                        'image' => $artistData['images'][0]['url'] ?? null,
+                        'url' => $artistData['external_urls']['spotify'] ?? null,
+                    ];
+                }
+            }
+        }
+
         return $this->render('article/slug.html.twig', [
             'article' => $article,
             'commentForm' => $form->createView(),
+            'artists' => $formattedArtists,
         ]);
     }
 
