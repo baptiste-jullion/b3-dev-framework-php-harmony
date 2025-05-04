@@ -54,10 +54,13 @@ class Article
     private Collection $comments;
     #[ORM\ManyToOne(inversedBy: 'articles')]
     private ?User $author = null;
+    #[ORM\Column(type: Types::ARRAY, nullable: true)]
+    private ?array $artists = null;
 
     public function __construct()
     {
         $this->comments = new ArrayCollection();
+        $this->createdAt = new \DateTimeImmutable();
     }
 
     public function getId(): ?Uuid
@@ -187,6 +190,18 @@ class Article
     public function setAuthor(?User $author): static
     {
         $this->author = $author;
+
+        return $this;
+    }
+
+    public function getArtists(): ?array
+    {
+        return $this->artists;
+    }
+
+    public function setArtists(?array $artists): static
+    {
+        $this->artists = $artists;
 
         return $this;
     }
